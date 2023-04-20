@@ -4,14 +4,15 @@ namespace App\Controller;
 
 use App\Model\PartnerManager;
 
-class PartnerController extends AbstractController{
+class PartnerController extends AbstractController
+{
      //Lister partenaires
     public function index(): string
     {
         $partnerManager = new PartnerManager();
-        $partners = $partnerManager->selectAll('name');
+        $partners = $partnerManager->selectAll('image');
 
-        return $this->twig->render('Partner/index.html.twig', ['partners' => $partners]);
+        return $this->twig->render('/Home/index.html.twig', ['partners' => $partners]);
     }
 
    //Voir les infos d'un partenaire

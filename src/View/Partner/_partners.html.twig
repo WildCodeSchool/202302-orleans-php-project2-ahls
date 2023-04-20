@@ -1,0 +1,16 @@
+    <h2>Nos partenaires</h2>
+    <p>L'Indien vous recommande :</p>
+
+    <div class="partners">
+
+    <ul>
+        {% for partner in partners %}
+            <li><img src="assets/images/{{ partner.image }}" alt="{{ partner.name }}"/></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+
+    </div>
+
+    

@@ -1,0 +1,32 @@
+h2{
+    text-align: center;
+}
+ul{
+    display: flex;
+    gap : 1%;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    
+}
+a{
+    color : black;
+}
+img{
+    width: clamp(20px, 300px, 400px);
+    height : clamp(200px, 200px, 300px)
+}
+ul li{
+    list-style-type: none;
+    width: 300px;
+    height : 200px;
+    border:1px solid black;
+    border-radius : 
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 300px;
+    margin-left: 1rem;
+    flex: 1 0 250px;
+    margin-left: 1rem;
+    scroll-snap-align: start;
+}
