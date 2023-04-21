@@ -5,7 +5,7 @@ ul{
     display: flex;
     gap : 1%;
     overflow-x: scroll;
-    padding: 1rem 0;
+    padding: var(--spacing-s);
     scroll-snap-type: x mandatory;
     
 }
@@ -13,7 +13,7 @@ a{
     color : black;
 }
 img{
-    width: clamp(20px, 300px, 400px);
+    width: clamp(200px, 300px, 400px);
     height : clamp(200px, 200px, 300px)
 }
 ul li{
@@ -21,12 +21,11 @@ ul li{
     width: 300px;
     height : 200px;
     border:1px solid black;
-    border-radius : 
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 300px;
-    margin-left: 1rem;
+    margin-left: var(--spacing-s);
     flex: 1 0 250px;
-    margin-left: 1rem;
+    margin-left: var(--spacing-s);
     scroll-snap-align: start;
 }
