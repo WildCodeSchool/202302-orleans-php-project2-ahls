@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="assets/css/association.css">
+{% endblock %}
+{% block title %}{{ parent() }}
+| Association{% endblock%}
+
+{% block content %}
+	<main class="container-fluid">
+		<h1>L'ASSOCIATION</h1>
+		<h2>MEMBRES DU CONSEIL D'ADMINISTRATION</h2>
+		<div class="grid">
+			{% for boardMember in boardMembers %}
+				<article>
+					<header>
+						<img src="{{ boardMember.image ?? 'assets/images/boardMember_placeholder.jpg'}}" alt="">
+						<img src="{{ boardMember.image ?? 'assets/images/vector.png'}}" alt="">
+					</header>
+					<h1>{{ boardMember.firstname}}
+						{{ boardMember.lastname}}</h1>
+					<h2>{{ boardMember.job}}</h2>
+				</article>
+			{% endfor %}
+		</div>
+
+	</main>
+{% endblock %}

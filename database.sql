@@ -61,3 +61,27 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+/*******Table Board Member*********/
+
+CREATE TABLE board_member (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  job VARCHAR(255) NOT NULL,
+  image VARCHAR(255)
+);
+
+INSERT INTO board_member (firstname, lastname, job) VALUES
+('Christiane', 'Dumas', 'Présidente et Secrétaire'),
+('Jean-Louis ', 'Delfau', 'Vice-Président'),
+('Françoise', 'Pi', 'Trésorière'),
+('Jean-Claude', 'Pilaudeau', 'Trésorier Adjoint'),
+('Claire', 'Beduchaud', 'Membre'),
+('Bernard', 'Robert', 'Membre'),
+('Abderrahim', 'Ghbabra', 'Membre'),
+('Jean-Louis', 'Delfau', 'Membre du groupe Indien'),
+('Nelly', 'Le Pennec', 'Membre du groupe Indien'),
+('Bernard', 'Robert', 'Membre du groupe Indien'),
+('Alain', 'Gay Garnaud', 'Membre du groupe Indien');
