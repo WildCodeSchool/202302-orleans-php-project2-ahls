@@ -1,5 +1,8 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
 {% block content %}
-{% include 'Partner/_partners.html.twig' %}
+	{% include 'Partner/_partners.html.twig' %}
 {% endblock %}

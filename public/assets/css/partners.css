@@ -1,7 +1,10 @@
-h2{
+
+.partners h2
+{
     text-align: center;
+    font-family: var(--title-font);
 }
-ul{
+.partners ul{
     display: flex;
     gap : 1%;
     overflow-x: scroll;
@@ -9,14 +12,17 @@ ul{
     scroll-snap-type: x mandatory;
     
 }
-a{
+.partners p{
+    font-family: var(--text-font);
+}
+.partners a{
     color : black;
 }
-img{
+.partners img{
     width: clamp(200px, 300px, 400px);
     height : clamp(200px, 200px, 300px)
 }
-ul li{
+.partners ul li{
     list-style-type: none;
     width: 300px;
     height : 200px;
