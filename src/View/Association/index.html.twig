@@ -3,8 +3,10 @@
 {% block stylesheet %}
 	<link rel="stylesheet" href="assets/css/association.css">
 {% endblock %}
-{% block title %}{{ parent() }}
-| Association{% endblock%}
+{% block title %}
+	{{ parent() }}
+	| Association
+{% endblock %}
 
 {% block content %}
 	<main class="container-fluid">
@@ -15,11 +17,11 @@
 				<article>
 					<header>
 						<img src="{{ boardMember.image ?? 'assets/images/boardMember_placeholder.jpg'}}" alt="">
-						<img src="{{ boardMember.image ?? 'assets/images/vector.png'}}" alt="">
 					</header>
-					<h1>{{ boardMember.firstname}}
-						{{ boardMember.lastname}}</h1>
-					<h2>{{ boardMember.job}}</h2>
+					<img src="{{ boardMember.image ?? 'assets/images/vector.png'}}" alt="">
+					<h3>{{ boardMember.firstname}}
+						{{ boardMember.lastname}}</h3>
+					<p>{{ boardMember.job}}</p>
 				</article>
 			{% endfor %}
 		</div>
