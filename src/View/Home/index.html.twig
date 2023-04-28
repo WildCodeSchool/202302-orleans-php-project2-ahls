@@ -2,12 +2,13 @@
 
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/home/header.css">
-    <link rel="stylesheet" href="/assets/css/home/partner/partner.css">
+	<link rel="stylesheet" href="/assets/css/home/actuality.css">
+	<link rel="stylesheet" href="/assets/css/home/partner.css">
 {% endblock %}
 {% block content %}
-    <header>
-        <h1>Association des Habitants d’Orléans La Source</h1>
-    </header>
+	<header>
+		<h1>Association des Habitants d’Orléans La Source</h1>
+	</header>
 	<section>
 		<article>
 			<div class="feed">
@@ -25,18 +26,21 @@
 					</a>
 				{% endfor %}
 				<a class="show_more" href="">Consulter la rubrique actualités ➔</a>
-			</article>
-		</section>
-	<header>
-		<h1>Association des Habitants d’Orléans La Source</h1>
-	</header>
+			</div>
+		</article>
+	</section>
+
 	<section class="partners">
 		<h1>Nos partenaires</h1>
-        <ul>
-		{% for partner in partners %}
-        <li><h2> {{partner.name}} </h2>
-			<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
-            </li>
-		{% endfor %}
+		<ul>
+			{% for partner in partners %}
+				<li>
+					<h2>
+						{{partner.name}}
+					</h2>
+					<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
 {% endblock %}

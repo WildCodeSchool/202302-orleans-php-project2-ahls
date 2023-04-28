@@ -32,8 +32,3 @@
 ul {
     padding-inline-start: 0px;
 }
-
-.grid {
-    --breakpoint: calc(360px - var(--spacing) * 2);
-    grid-template-columns: repeat(auto-fit, minmax(var(--breakpoint), 1fr));
-}
