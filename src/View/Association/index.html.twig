@@ -1,0 +1,59 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="assets/css/association.css">
+{% endblock %}
+{% block title %}
+	{{ parent() }}
+	| Association
+{% endblock %}
+
+{% block content %}
+	<header>
+		<div class="associationTitle">
+			<h1>L' ASSOCIATION</h1>
+			<img class="horizontalBar" src='assets/images/vector.png' alt="illustration d'une barre horizontale">
+		</div>
+	</header>
+	<main class="container-fluid">
+		<div class="presentation">
+			<div class="presentationTitle">
+				<h2>PRESENTATION DE
+					<br>
+					L'ASSOCIATION</h2>
+				<img class="horizontalBar" src='assets/images/vector.png' alt="illustration d'une barre horizontale">
+			</div>
+			<section class="container">
+				<p>L'AHLS a été créée en 1976 par les habitants soucieux de la réussite de leur quartier. Elle est force de propositions, basée sur une vision d’avenir du quartier de La Source qui reste toujours à construire.</p>
+				<p>Trois objectifs constants :</p>
+				<ul>
+					<li>(S)'informer</li>
+					<li>Proposer</li>
+					<li>Réunir</li>
+				</ul>
+				<p>avec la conviction que la citoyenneté est la clé de la réussite de la vie sociale du quartier.</p>
+				<img src='assets/images/chaufferie.jpg' alt="photo de la chaufferie de la Source">
+				<p>Ce quartier possède de nombreux atouts et une extraordinaire concentration de richesses. Il est au cœur de la modernité au regard du potentiel intellectuel et économique, avec un capital humain d’une grande diversité, sur lequel on doit s’appuyer pour réussir et intégrer.</p>
+				<p>Les solidarités doivent l’emporter sur le repli sur soi, tentation majeure aujourd’hui. Tout ceci n’est possible que si ses habitants sont exigeants sur la qualité de leur lieu de vie.</p>
+				<p>Notre association travaille en ce sens.</p>
+			</section>
+		</div>
+
+
+		<h2>MEMBRES DU CONSEIL D'ADMINISTRATION</h2>
+		<div class="grid">
+			{% for boardMember in boardMembers %}
+				<article>
+					<header>
+						<img src="{{ boardMember.image ?? 'assets/images/boardMember_placeholder.jpg'}}" alt="">
+					</header>
+					<img src='assets/images/vector.png' alt="">
+					<h3>{{ boardMember.firstname}}
+						{{ boardMember.lastname}}</h3>
+					<p>{{ boardMember.job}}</p>
+				</article>
+			{% endfor %}
+		</div>
+	</div>
+
+</main>{% endblock %}

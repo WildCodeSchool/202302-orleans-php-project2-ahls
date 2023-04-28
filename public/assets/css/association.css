@@ -1,0 +1,96 @@
+* {
+    font-family: var(--text-font);
+}
+
+.horizontalBar {
+    width: clamp(150px, 25vw, 220px);
+    max-width: 100%;
+    height: auto;
+}
+
+.associationTitle,
+.presentationTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: var(--spacing-l);
+}
+.associationTitle h1,
+.presentationTitle h2 {
+    font-family: var(--title-font);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: bold;
+    text-align: center;
+    margin-block-end: var(--spacing-s);
+}
+
+.container-fluid {
+    background-color: var(--secondary-color);
+    padding-block-start: var(--spacing);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.container-fluid p {
+    font-size: calc(var(--font-size) * 1.25);
+}
+.presentation {
+    margin: 0 auto;
+    max-width: 900px;
+}
+.presentationTitle h2 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.container ul li {
+    list-style-type: none;
+    font-weight: bolder;
+    font-size: var(--font-size2);
+    text-align: center;
+    margin-top: 10px;
+    margin-block-end: 10px;
+}
+
+.container img {
+    display: block;
+    margin: 0 auto;
+    margin-block-start: var(--spacing-l);
+    margin-block-end: var(--spacing-l);
+}
+.container p:last-child {
+    font-weight: bold;
+    text-align: center;
+    font-size: calc(var(--font-size) * 1.5);
+    margin-block-start: var(--spacing-l);
+}
+.container p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+.container ul li {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+article {
+    flex-basis: calc(25% - 10px);
+    background-color: var(--light-color);
+    padding-block-end: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+article > header {
+    margin-bottom: calc(var(--spacing) * 0.5);
+    border-bottom: none;
+    padding: var(--spacing);
+    padding-block-end: var(--spacing);
+}
+
+header .grid h1 {
+    margin-bottom: var(--spacing-s);
+}
+.grid p {
+    color: var(--primary-color);
+}
+.grid h3 {
+    font-size: calc(var(--font-size) * 0.75);
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing-s);
+}

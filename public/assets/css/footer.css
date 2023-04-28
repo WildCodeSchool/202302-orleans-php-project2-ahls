@@ -8,13 +8,14 @@ body > footer {
 footer li {
     list-style-type: none;
     color: var(--light-color);
-    font-size: calc(var(--font-size) * 1.5);
     font-weight: bold;
+    font-size: clamp(var(--font-size), 2vw, calc(var(--font-size) * 2));
 }
 
 footer > .coordinate > .title {
     font-family: var(--primary-color);
     font-size: calc(var(--font-size) * 3);
+    font-weight: bold;
 }
 
 footer li.email a {
@@ -27,15 +28,15 @@ footer li.adress {
 
 .social {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing);
     margin-block-start: var(--spacing);
 }
 
 .social li {
-    width: 70px;
-    height: 70px;
-    min-width: 35px;
+    width: clamp(calc(var(--font-size) * 2), 3vw, calc(var(--font-size) * 4));
+    height: clamp(calc(var(--font-size) * 2), 3vw, calc(var(--font-size) * 4));
 }
 
 footer img {

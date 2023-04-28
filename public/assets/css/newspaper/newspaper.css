@@ -1,0 +1,71 @@
+body>main {
+    padding: 0;
+}
+
+h1 {
+    padding-top: calc(var(--spacing)*2);
+    margin-bottom: 0;
+    padding-inline: 0;
+    display: flex;
+    justify-content: center;
+    color: var(--dark-color);
+    font-family: var(--title-font);
+}
+
+.vector {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+    padding-inline: var(--spacing-s);
+    gap: var(--spacing);
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+article {
+    padding-inline: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+article>header {
+    padding: var(--spacing-s);
+    margin-inline: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--text-font);
+    font-weight: 700;
+    
+}
+
+article img {
+    object-fit: cover;
+    width: 100%;
+}
+
+article>footer {
+    padding: 0;
+    margin-top: 0;
+    margin-inline: 0;
+    border-top: 0;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+button {
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--text-font);
+    border: 0;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 5px solid var(--primary-color);
+}

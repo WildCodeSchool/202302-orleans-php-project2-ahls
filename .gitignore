@@ -1,8 +1,11 @@
 /vendor/
 /temp/*
+/reused/
 .phpcs-cache
 *.cache
 db.php
 .idea
 .vscode
-.DS_Store
+ahls.db
+/.tours/
+$myConnection.session.sql

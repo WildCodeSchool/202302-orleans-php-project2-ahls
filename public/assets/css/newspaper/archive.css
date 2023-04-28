@@ -1,0 +1,22 @@
+details {
+    border-bottom: 0;
+}
+
+details summary[role="button"] {
+    margin-left: var(--spacing-s);
+    width: calc(var(--spacing-l) * 2);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-family: var(--text-font);
+    border: 0;
+}
+
+.archives {
+    margin-inline: var(--spacing-s);
+}
+
+.archives a {
+    color: var(--primary-color);
+    font-family: var(--text-font);
+    font-weight: 700;    
+}

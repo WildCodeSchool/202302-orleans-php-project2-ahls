@@ -1,30 +1,39 @@
 @import url(navbar.css);
 @import url(footer.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:wght@100&display=swap");
 
-[data-theme=“light”],
-:root:not([data-theme=“dark”]) {
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
     --primary-color: rgb(171, 150, 97);
     --secondary-color: rgb(255, 254, 245);
     --dark-color: rgb(23, 24, 21);
     --light-color: rgb(251, 250, 250);
-    --shadow-color: rgba(23, 24, 21, 0.450);
+    --shadow-color: rgba(23, 24, 21, 0.45);
 }
-        
+
 :root {
-    --title-font:'Raleway';
-    --text-font: 'Open Sans';
+    --title-font: "Raleway";
+    --text-font: "Open Sans";
     --third-font: "Poppins";
 
     --font-size1: 1rem;
     --font-size2: 2rem;
-    
+
     --spacing-s: 1rem;
     --spacing: 2rem;
     --spacing-l: 4rem;
-    
+
     --border-radius: 8px;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+.grid {
+    --breakpoint: calc(360px - var(--spacing) * 2);
+    grid-template-columns: repeat(auto-fit, minmax(var(--breakpoint), 1fr));
 }

@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/newspaper/newspaper.css">
+{% endblock %}
+{% block content %}
+    <main>
+        <h1>CONSULTER L'INDIEN</h1>
+        <div class="vector">
+            <img src="assets/images/vector.png" width="300px">
+        </div>
+        <div class="grid">
+            {% for newspaper in newspapers|slice(0, 8) %}
+                <article>
+                    <header>n°{{newspaper.number}} {{newspaper.date}}</header>
+                    <img src="{{ newspaper.cover ?? 'assets/images/cover137_placeholder.png'}}" >
+                    <footer >
+                        <a href="{{ newspaper.link ?? '/'}}"><button>en savoir plus</button></a>
+                    </footer>
+                </article>
+            {% endfor %}
+        </div>
+        {% block archive %}
+            {% include 'Newspaper/archive.html.twig' %}
+        {% endblock %}
+    </main>
+{% endblock %}
+
+

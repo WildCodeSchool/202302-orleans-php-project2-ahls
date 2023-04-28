@@ -1,0 +1,22 @@
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/newspaper/archive.css">
+{% endblock %}
+
+{% block archive %}
+    <details>
+            <summary role="button">Archives</summary>
+            <div class="archives">
+                <table>
+                    <tbody>
+                        {% for newspaper in newspapers|slice(9) %}
+                            <tr>
+                                <td>
+                                    <a href="{{ newspaper.link ?? '/'}}">n°{{newspaper.number}}  {{newspaper.date}}</a>
+                                </td>
+                            </tr>
+                        {% endfor %}                            
+                    </tbody>
+                </table>
+            </div>
+        </details>
+{% endblock %}

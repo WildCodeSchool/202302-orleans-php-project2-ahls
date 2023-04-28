@@ -1,6 +1,42 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/home/header.css">
+    <link rel="stylesheet" href="/assets/css/home/partner/partner.css">
+{% endblock %}
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <p>Find a complete CRUD example on <a href="/items">/items</a> page.</p>
+    <header>
+        <h1>Association des Habitants d’Orléans La Source</h1>
+    </header>
+	<section>
+		<article>
+			<div class="feed">
+				<h2>DERNIÈRES ACTUALITÉS</h2>
+				<img src="assets/images/vector.png" class="decoration">
+				{% for article in actuality %}
+					<a href="">
+						<div class="article">
+							<h3>{{ article.title }}</h3>
+							<p class="article_date">{{ article.date }}</p>
+							<p>{{ article.content }}
+								<b>Lire la suite</b>
+							</p>
+						</div>
+					</a>
+				{% endfor %}
+				<a class="show_more" href="">Consulter la rubrique actualités ➔</a>
+			</article>
+		</section>
+	<header>
+		<h1>Association des Habitants d’Orléans La Source</h1>
+	</header>
+	<section class="partners">
+		<h1>Nos partenaires</h1>
+        <ul>
+		{% for partner in partners %}
+        <li><h2> {{partner.name}} </h2>
+			<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
+            </li>
+		{% endfor %}
+	</section>
 {% endblock %}
