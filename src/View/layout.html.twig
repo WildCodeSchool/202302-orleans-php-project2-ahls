@@ -6,24 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="/assets/images/favicon.png">
 
-    <title>{% block title %}AHLS{% endblock %}</title>
+		<title>
+			{% block title %}AHLS
+			{% endblock %}
+		</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="/assets/css/actuality.css">
-    {% block stylesheet %}{% endblock %}
-</head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
+		</head>
 
-<body>
-    {% block navbar %}
-        {% include 'components/_navbar.html.twig' %}
-    {% endblock %}
-	{% block content %}{% endblock %}
-	{% block footer %}
-		{% include 'components/_footer.html.twig' %}
-	{% endblock %}
-    {% block javascript %}{% endblock %}
-</body>
-</html>		
-
-	
-	
+		<body>
+			{% block navbar %}
+				{% include 'components/_navbar.html.twig' %}
+			{% endblock %}
+			{% block content %}{% endblock %}
+			{% block footer %}
+				{% include 'components/_footer.html.twig' %}
+			{% endblock %}
+			{% block javascript %}{% endblock %}
+		</body>
+	</html>
