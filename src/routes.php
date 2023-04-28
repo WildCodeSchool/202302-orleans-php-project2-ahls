@@ -16,4 +16,5 @@ return [
     'association' => ['AssociationController', 'index',],
 
     'journaux' => ['NewspaperController', 'index'],
+    'contact' => ['ContactController', 'index'],
 ];
