@@ -1,12 +1,13 @@
 {% extends 'adminLayout.html.twig' %}
 
-{% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/admin.css">
+{% block title %}
+{{ parent() }} Journaux
 {% endblock %}
 
 {% block content %}
     <main class="container">
         <h1>Administration des journaux</h1>
+        <a href="journaux/ajouter" role="button">Ajouter un journal</a>
         <table>
             <thead>
                 <tr>

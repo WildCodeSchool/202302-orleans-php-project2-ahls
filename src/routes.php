@@ -18,5 +18,7 @@ return [
     'journaux' => ['NewspaperController', 'index'],
 
     'admin/journaux' => ['AdminNewspaperController', 'index'],
+    'admin/journaux/ajouter' => ['AdminNewspaperController', 'add'],
+
 
 ];
