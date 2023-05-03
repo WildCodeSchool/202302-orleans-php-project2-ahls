@@ -8,7 +8,7 @@ class AdminPartnerController extends AbstractController
 {
     public function index(): string
     {
-    $partnerManager = new PartnerManager();
+        $partnerManager = new PartnerManager();
         $partners = $partnerManager->selectAll();
 
         return $this->twig->render('Admin/Partner/index.html.twig', [
