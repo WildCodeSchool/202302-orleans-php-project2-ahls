@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<header>
+	<h1>Liste des partenaires</h1>
+</header>
+<section>
+	<table>
+		<tr>
+			<th>Nom></th>
+			<th>Adresse</th>
+			<th>Site Web</th>
+		</tr>
+
+		{% for partner in partners %}
+			<tr>
+				<td>{{ partner.name }}</td>
+				<td>{{ partner.address }}</td>
+				<td>{{ partner.url }}</td>
+				<td>{{ partner.image }}</td>
+			</tr>
+		</table>
+	{% endfor %}
