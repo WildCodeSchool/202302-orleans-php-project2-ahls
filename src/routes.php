@@ -17,4 +17,5 @@ return [
     'admin/association' => ['AdminAssociationController', 'index',],
     'journaux' => ['NewspaperController', 'index'],
     'contact' => ['ContactController', 'index'],
+    'partenaires/éditer' => ['PartnerController', 'edit', ['id']],
 ];
