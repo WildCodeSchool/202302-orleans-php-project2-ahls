@@ -69,6 +69,8 @@ a:-webkit-any-link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 150ms;
+    margin-block-start: calc(var(--spacing) * 0.7);
 }
 
 .cover img {
@@ -76,7 +78,6 @@ a:-webkit-any-link {
     height: 90%;
     padding-block-start: 0.5rem;
     padding-block-end: var(--spacing);
-    transition: 500ms;
 }
 
 .number {
@@ -85,13 +86,14 @@ a:-webkit-any-link {
     text-align: center;
 }
 
-.cover img:hover {
-    height: 93%;
+.cover:hover {
+    background-color: #e6e6e6;
+    border-radius: var(--border-radius);
 }
 
 .show_more_newspapers {
     display: flex;
-    margin-block-start: calc(var(--spacing-l) * 1.4);
+    margin-block-start: calc(var(--spacing-l) * 0.7);
     justify-content: center;
     align-items: flex-end;
     width: 100%;
