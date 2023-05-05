@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	Modifier partenaires
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<h1>Modifier le  partenaire
+			{{ partner.name }}
+		</h1>
+		{% include 'Admin/Partner/_form.html.twig' %}
+		<a href="/partners/show?id={{ partner.id }}">Retour</a>
+	{% endblock %}

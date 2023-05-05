@@ -1,0 +1,6 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--title-font);
+    color: var(--dark-color);
+}

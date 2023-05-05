@@ -16,6 +16,10 @@ return [
     'association' => ['AssociationController', 'index',],
     'admin/association' => ['AdminAssociationController', 'index',],
     'journaux' => ['NewspaperController', 'index'],
+    'admin/partenaires' => ['AdminPartnerController', 'index',],
+    'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
     'contact' => ['ContactController', 'index'],
-    'partenaires/éditer' => ['PartnerController', 'edit', ['id']],
+    'admin/partenaires/modifier' => ['AdminPartnerController', 'update', ['id']],
+    'admin/partenaires/supprimer' => ['AdminPartnerController', 'delete', ['id']],
+    'admin/journaux' => ['AdminNewspaperController', 'index'],
 ];

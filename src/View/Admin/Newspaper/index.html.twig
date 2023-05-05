@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
+
+{% block content %}
+    <main class="container">
+        <h1>Administration des journaux</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Date</th>
+                    <th>Couverture</th>
+                    <th>Lien</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for newspaper in newspapers %}
+                    <tr>
+                        <td>{{ newspaper.number }}</td>
+                        <td>{{ newspaper.date }}</td>
+                        <td>{{ newspaper.cover }}</td>
+                        <td>{{ newspaper.link }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+{% endblock %}
+{% block footer %}{% endblock %}

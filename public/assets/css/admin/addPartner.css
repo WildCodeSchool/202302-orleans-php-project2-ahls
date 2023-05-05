@@ -1,0 +1,18 @@
+h1{
+    margin-top : var(--spacing);
+    text-align: center;
+    margin-bottom : 0;
+}
+form{
+    width : 90%;
+    margin : auto;
+}
+.error li{
+    color:red;
+    width : 90%;
+    margin :auto;
+    margin-top : var(--spacing);
+}
+footer{
+    display : none;
+}

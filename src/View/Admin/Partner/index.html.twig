@@ -1,5 +1,47 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
+{% block stylesheet %}{% endblock %}
 
+{% block title %}
+	Admin partenaires
 {% endblock %}
+
+{% block content %}
+	<main class="container">
+
+		<h1>Administration des partenaires</h1>
+		<a href="admin/partenaires/ajouter" role="button">Ajouter un Partenaire</a>
+		<table>
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Adresse</th>
+					<th>Site web</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for partner in partners %}
+					<tr>
+						<td>
+							{{ partner.name }}
+						</td>
+						<td>
+							{{ partner.address }}
+						</td>
+						<td>
+							{{ partner.url }}
+						</td>
+						<td>
+							<a href="admin/partenaires/modifier?id={{ partner.id }}">Modifier</a>
+							<form action="admin/partenaires/supprimer?id={{ partner.id }}" method="POST">
+								<button>Supprimer</button>
+							</form>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</main>
+	{% endblock %}
+
+	{% block footer %}{% endblock %}
