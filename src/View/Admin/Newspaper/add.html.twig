@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
+
+{% block content %}
+    <main class="container">
+        <h1>Ajouter un journal</h1>
+        
+        {% include 'Admin/Newspaper/_form.html.twig' %}
+        
+        <a href="/admin/journaux">Retour</a>
+    </main>
+{% endblock %}
+{% block footer %}{% endblock %}

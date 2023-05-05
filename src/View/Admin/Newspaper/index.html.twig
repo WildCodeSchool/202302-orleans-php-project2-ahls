@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
+
+{% block content %}
+    <main class="container">
+        <h1>Administration des journaux</h1>
+        <a href="journaux/ajouter" role="button">Ajouter un journal</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Date</th>
+                    <th>Couverture</th>
+                    <th>Lien</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for newspaper in newspapers %}
+                    <tr>
+                        <td>{{ newspaper.number }}</td>
+                        <td>{{ newspaper.date|date("m-Y") }}</td>
+                        <td>{{ newspaper.cover }}</td>
+                        <td>{{ newspaper.link }}</td>
+                        <td class="buttons">
+                            <div class="icons">
+                                <a href="/admin/journaux/modifier?id={{ newspaper.id }}">
+                                    <img src="/assets/images/edit.svg" alt="modifier" width="50px">
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+{% endblock %}
+{% block footer %}{% endblock %}

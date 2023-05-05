@@ -1,0 +1,40 @@
+main {
+    font-family: var(--text-font);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--title-font);
+    color: var(--dark-color);
+}
+
+label {
+    color: var(--dark-color);
+}
+
+.errors {
+    color: var(--error-color);
+    font-family: var(--text-font);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 0;
+}
+
+[role="button"] {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 0;
+}
+
+input {
+    border: 1px solid var(--primary-color);
+    color: var(--dark-color);
+}

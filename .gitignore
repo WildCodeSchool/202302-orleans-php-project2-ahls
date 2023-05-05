@@ -9,3 +9,4 @@ db.php
 ahls.db
 /.tours/
 $myConnection.session.sql
+DS_Store

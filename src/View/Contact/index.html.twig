@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+{% block content %}
+    <div class="grid">
+        <form action="" method="POST">
+            <h3>NOUS CONTACTER</h3>
+            <div class="vector">
+                <img src="assets/images/vector.png" width="300px">
+            </div>
+            <ul class="error">
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+                <label for="firstname">Prénom</label>
+                <input type="text" id="firstname" name="firstname" value="{{ contact.firstname }}" required>
+
+                <label for="lastname">Nom</label>
+                <input type="text" id="lastname" name="lastname" value="{{ contact.lastname }}" required>
+                
+            
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" name="email" value="{{ contact.email}}" required>
+
+                <label for="comment">Commentaire</label>
+                <textarea type="text" id="comment" name="comment" rows="8" required>{{ contact.comment }}</textarea>
+
+                <button type="submit">Envoyer</button>     
+        </form>
+        <div class="map">
+            <h3>PLAN D'ACCES</h3>
+            <div class="vector">
+                <img src="assets/images/vector.png" width="300px">
+            </div>
+            <iframe width="425" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=1.9261801242828371%2C47.836277273262354%2C1.9433033466339114%2C47.84258561950846&amp;layer=mapnik&amp;marker=47.83943154226675%2C1.934741735458374" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=47.83943&amp;mlon=1.93474#map=17/47.83943/1.93474">Afficher une carte plus grande</a></small>
+        </div>
+    </div>
+{% endblock %}

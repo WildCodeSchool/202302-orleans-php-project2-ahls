@@ -1,0 +1,17 @@
+<ul class="errors">
+	{% for error in errors %}
+		<li>{{ error }}</li>
+	{% endfor %}
+</ul>
+<form action="" method="POST">
+	<label for="lastname">Nom</label>
+	<input type="text" id="lastname" name="lastname" required maxlength="255" value="{{boardMember.lastname}}">
+
+	<label for="firstname">Prénom</label>
+	<input type="text" id="firstname" name="firstname" required maxlength="255" value="{{boardMember.firstname}}">
+
+	<label for="job">Statut</label>
+	<input type="text" id="job" name="job" required maxlength="255" value="{{boardMember.job}}">
+
+	<button>{{ buttonName|default('Ajouter') }}</button>
+</form>

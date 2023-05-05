@@ -31,7 +31,7 @@
     background-color: var(--secondary-color);
     padding-block-start: var(--spacing);
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
 }
 .container-fluid p {
     font-size: calc(var(--font-size) * 1.25);
@@ -59,12 +59,13 @@
     margin-block-start: var(--spacing-l);
     margin-block-end: var(--spacing-l);
 }
-.container p:last-child {
+.last_paragraph {
     font-weight: bold;
     text-align: center;
     font-size: calc(var(--font-size) * 1.5);
     margin-block-start: var(--spacing-l);
 }
+
 .container p {
     font-size: clamp(1rem, 2vw, 1.25rem);
 }

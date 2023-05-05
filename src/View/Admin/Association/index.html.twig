@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	| Admin Association
+{% endblock %}
+
+
+{% block content %}
+	<main class="container">
+		<h1>Administration des membres du Conseil</h1>
+		<a href="/admin/association/ajouter" role="button">Ajouter un membre du Conseil</a>
+		<table>
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>Statut</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for boardMember in boardMembers %}
+					<tr>
+						<td>{{ boardMember.lastname }}</td>
+						<td>{{ boardMember.firstname }}</td>
+						<td>{{ boardMember.job }}</td>
+						<td>
+							<a role="button" href="/admin/association/modifier?id={{ boardMember.id }}">Modifier</a>
+							<form action="/admin/association/supprimer?id={{ boardMember.id }}" method="POST">
+								<button>Supprimer</button>
+							</form>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
+{% endblock %}

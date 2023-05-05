@@ -11,7 +11,7 @@
                         {% for newspaper in newspapers|slice(9) %}
                             <tr>
                                 <td>
-                                    <a href="{{ newspaper.link ?? '/'}}">n°{{newspaper.number}}  {{newspaper.date}}</a>
+                                    <a href="{{ newspaper.link ?? '/'}}">n°{{newspaper.number}}  {{newspaper.date|date("m-Y")}}</a>
                                 </td>
                             </tr>
                         {% endfor %}                            

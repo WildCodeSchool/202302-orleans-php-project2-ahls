@@ -14,6 +14,14 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'association' => ['AssociationController', 'index',],
-
+    'admin/association' => ['AdminAssociationController', 'index',],
+    'admin/association/ajouter' => ['AdminAssociationController', 'create',],
+    'admin/association/modifier' => ['AdminAssociationController', 'update', ['id']],
+    'admin/association/supprimer' => ['AdminAssociationController', 'delete', ['id']],
     'journaux' => ['NewspaperController', 'index'],
+    'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
+    'contact' => ['ContactController', 'index'],
+    'admin/journaux' => ['AdminNewspaperController', 'index'],
+    'admin/journaux/ajouter' => ['AdminNewspaperController', 'add'],
+    'admin/journaux/modifier' => ['AdminNewspaperController', 'edit', ['id']],
 ];

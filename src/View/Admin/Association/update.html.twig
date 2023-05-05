@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	| Modifier Association
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<h1>Modifier les informations de
+			{{ boardMember.lastname }}
+			{{ boardMember.firstname }}</h1>
+
+		{% include 'Admin/Association/_form.html.twig' with {buttonName: 'Modifier'} %}
+
+		<a href="/admin/association">Retour</a>
+	</main>
+{% endblock %}

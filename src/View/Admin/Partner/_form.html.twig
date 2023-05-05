@@ -1,0 +1,28 @@
+ {% block content %}
+ <div class="error">
+    <ul>
+        {% for error in errors %}
+            <li> {{ error }} </li> <br>
+        {% endfor %}
+    </ul>
+ </div>
+{% endblock %}
+
+	<form method="post" action="" enctype="multipart/form-data">
+	<input type="hidden" value="{{ partner.id }}" name="id">
+    
+	<label for="name">Nom</label>
+	<input type="text" value="{{ partner.name }}" name="name" id="name" required maxlength="255">
+
+    <label for="address">Adresse</label>
+	<input type="text" value="{{ partner.adress }}" name="address" id="address" required>
+
+    <label for="url">Site web</label>
+	<input type="url" value="{{ partner.url }}" name="url" id="url">
+
+    <label for="imageUpload">Ajoutez une image</label>    
+    <input type="file" name="imageUpload" id="imageUpload"/>
+
+	<button>Ajouter</button>
+   
+    </form>

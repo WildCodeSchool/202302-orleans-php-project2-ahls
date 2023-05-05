@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	| Ajout Association
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<h1>Ajouter un membre du Conseil</h1>
+
+		{% include 'Admin/Association/_form.html.twig' %}
+
+		<a href="/admin/association">Retour</a>
+	</main>
+{% endblock %}
