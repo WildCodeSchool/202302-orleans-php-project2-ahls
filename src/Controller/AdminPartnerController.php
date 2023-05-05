@@ -61,7 +61,7 @@ class AdminPartnerController extends AbstractController
 
                 // if validation is ok, insert and redirection
                 $partnerManager = new PartnerManager();
-                $id = $partnerManager->insert($partner);
+                $partnerManager->insert($partner);
 
                 header('Location:admin/partners/ajouter');
                 return '';
