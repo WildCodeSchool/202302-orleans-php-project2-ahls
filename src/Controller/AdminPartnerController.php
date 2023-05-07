@@ -55,5 +55,3 @@ class AdminPartnerController extends AbstractController
         return $this->twig->render('Admin/Partner/update.html.twig', ['partner' => $partner]);
     }
 }
-
-
