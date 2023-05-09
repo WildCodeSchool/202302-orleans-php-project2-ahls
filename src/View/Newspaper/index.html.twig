@@ -13,7 +13,7 @@
             {% for newspaper in newspapers|slice(0, 8) %}
                 <article>
                     <header>n°{{newspaper.number}} {{newspaper.date|date("m-Y")}}</header>
-                    <img src="{{ newspaper.cover ?? 'assets/images/cover137_placeholder.png'}}" >
+                     <img src="/assets/images/{{ newspaper.cover ?? 'journaux_placeholder.jpg'}}">
                     <footer >
                         <a href="{{ newspaper.link ?? '/'}}"><button>en savoir plus</button></a>
                     </footer>

@@ -65,7 +65,7 @@ class AdminActualityController extends AbstractController
                 $actualityManager->insert($article);
 
                 // redirection
-                header('Location: /admin_actuality');
+                header('Location: /admin/actualites');
             }
         }
 

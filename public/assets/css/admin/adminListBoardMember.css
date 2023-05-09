@@ -17,6 +17,7 @@ body {
 }
 h3 {
     font-family: var(--text-font);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     color: var(--light-color);
 }
 
@@ -49,6 +50,7 @@ form {
     background-color: var(--primary-color);
     color: var(--light-color);
     border: 0;
+    font-size: clamp(0.6rem, 2vw, 1rem);
 }
 
 [role="button"]:hover {
@@ -67,6 +69,44 @@ nav ul li:last-child a {
     top: calc(var(--spacing) * 0.2);
     visibility: hidden;
 }
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    width: 33%;
+}
+
+.btn-container {
+    padding: 1rem;
+}
+
+main {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.2rem;
+    font-size: clamp(0.5rem, 2vw, 1rem);
+}
+
+th {
+    text-align: left;
+}
+
+.btn-container a,
+.btn-container button {
+    font-size: clamp(0.5rem, 1vw, 1rem);
+}
+
 @media screen and (max-width: 900px) {
     nav {
         display: flex;
@@ -86,7 +126,6 @@ nav ul li:last-child a {
         display: flex;
         flex-direction: column;
     }
-
     .menu {
         visibility: visible;
     }
