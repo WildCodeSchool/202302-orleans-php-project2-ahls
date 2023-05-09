@@ -9,8 +9,8 @@ class ActualityController extends AbstractController
     public function index(): string
     {
         $actualityManager = new ActualityManager();
-        $article = $actualityManager->selectThreeArticles();
+        $articles = $actualityManager->selectThreeArticles();
 
-        return $this->twig->render('Home/index.html.twig', ['actuality' => $article]);
+        return $this->twig->render('Home/index.html.twig', ['articles' => $articles]);
     }
 }

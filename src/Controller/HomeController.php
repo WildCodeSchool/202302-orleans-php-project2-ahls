@@ -13,12 +13,12 @@ class HomeController extends AbstractController
         $newspaperManager = new NewspaperManager();
         $newspapers = $newspaperManager->showLastByNumber();
         $actualityManager = new ActualityManager();
-        $article = $actualityManager->selectAll('date', 'DESC');
+        $articles = $actualityManager->selectThreeArticles('date', 'DESC');
         $partnerManager = new PartnerManager();
         $partners = $partnerManager->selectAll();
         return $this->twig->render('Home/index.html.twig', [
             'partners' => $partners,
-            'actuality' => $article,
+            'articles' => $articles,
             'newspapers' => $newspapers,
         ]);
     }

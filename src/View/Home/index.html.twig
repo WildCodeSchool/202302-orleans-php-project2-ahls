@@ -15,8 +15,8 @@
 				<div class="feed">
 					<h2>DERNIÈRES ACTUALITÉS</h2>
 					<img src="assets/images/vector.png" class="decoration">
-					{% for article in actuality %}
-						<a href="">
+					{% for article in articles %}
+						<a href={{ article.url }}>
 							<div class="article">
 								<h3>{{ article.title }}</h3>
 								<p class="article_date">{{ article.date }}</p>

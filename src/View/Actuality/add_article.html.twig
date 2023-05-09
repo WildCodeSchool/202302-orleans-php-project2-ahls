@@ -24,6 +24,8 @@
 		<input type="datetime-local" value="{{ article.date }}" name="date" id="date">
 		<label for="content">Contenu</label>
 		<textarea value="{{ article.content }}" name="content" id="content"></textarea>
+		<label for="url">Lien vers l'article</label>
+		<input type="url" value="{{ article.url }}" name="url" id="url">
 		<button>Soumettre</button>
 	</form>
 	<a class="back" href="/admin/actualites">Retour</a>
