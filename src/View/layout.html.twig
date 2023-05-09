@@ -1,32 +1,32 @@
 <!doctype html>
 <html lang="fr" data-theme="light">
 	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/footer.css">
+		<link rel="stylesheet" href="/assets/css/navbar.css"> {% block stylesheet %}{% endblock %}
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="/assets/images/favicon.png">
-
 		<title>
 			{% block title %}AHLS
 			{% endblock %}
 		</title>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-		<link rel="stylesheet" href="/assets/css/style.css"> 
-        {% block stylesheet %}{% endblock %}
-		</head>
+	</head>
 
-		<body>
-			{% block navbar %}
-					{% include 'components/_navbar.html.twig' %}
-			{% endblock %}
+	<body>
+		{% block navbar %}
+			{% include 'components/_navbar.html.twig' %}
+		{% endblock %}
 
-			{% block content %}{% endblock %}
+		{% block content %}{% endblock %}
 
-			{% block footer %}
-					{% include 'components/_footer.html.twig' %}
-			{% endblock %}
+		{% block footer %}
+			{% include 'components/_footer.html.twig' %}
+		{% endblock %}
 
-			{% block javascript %}{% endblock %}
-		</body>
-	</html>
+		{% block javascript %}{% endblock %}
+	</body>
+</html>

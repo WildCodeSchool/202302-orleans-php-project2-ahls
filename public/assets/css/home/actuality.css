@@ -38,17 +38,18 @@ main {
     color: var(--dark-color) ;
 }
 
-section {
-    display: flex;
+.news_newspapers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
-    gap: calc(var(--spacing) * 1);
     margin-block-end: 0;
+
 }
 
 article {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: calc(var(--spacing) * 1);
     padding: var(--spacing);
     background-color: var(--secondary-color);
@@ -59,7 +60,6 @@ article {
     flex-direction: column;
     margin-block-start: 0;
     padding: 0;
-    max-height: 100%;
 }
 
 h2 {
@@ -76,6 +76,8 @@ h3 {
     font-weight: lighter;
     text-decoration: underline;
     font-size: clamp(1.1rem, 0.8rem + 1.3vw, 1.8rem);
+    margin-block-end: 1rem;
+    margin-block-start: 1rem;
 }
 
 p {
@@ -94,8 +96,7 @@ p {
     background-color: var(--light-color);
     border-radius: var(--border-radius);
     display: flex;
-    padding: 1rem;
-    margin-block: calc(var(--spacing) * 0.9);
+    margin-block: calc(var(--spacing) * 0.8);
     flex-direction: column;
     transition-duration: 150ms;
 }
@@ -117,15 +118,16 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
-.show_more {
+.show_more_news {
     display: flex;
-    margin-block-start: calc(var(--spacing) * 0.2);
+    margin-block-start: calc(var(--spacing) * 1.9);
     justify-content: center;
+    align-self: last baseline;
     width: 100%;
 }
 
 @media screen and (max-width: 800px) {
-    section {
+    .news_newspapers {
         display: flex;
         flex-direction: column;
         align-items: center;

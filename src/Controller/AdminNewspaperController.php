@@ -82,4 +82,14 @@ class AdminNewspaperController extends AbstractController
             'newspaper' => $newspaper,
         ]);
     }
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $newspaperManager = new NewspaperManager();
+            $newspaperManager->delete($id);
+
+            header('Location: /admin/journaux');
+        }
+    }
 }

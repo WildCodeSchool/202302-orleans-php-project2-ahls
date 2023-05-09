@@ -1,0 +1,37 @@
+{% extends 'adminLayout.html.twig' %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/admin.css">
+{% endblock %}
+
+{% block title %}
+	{{ parent() }}
+	- Admin - Gestion des actualités
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<h1>Admin - Gestion des actualités</h1>
+		<a role="button" href="actualites/ajouter">Ajouter un article</a>
+		<div class="list">
+			<table>
+				<tbody>
+					{% for copy in article %}
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<b>{{ copy.title }}</b><br>Publié le
+										{{ copy.date }}<br>{{ copy.content }}</li>
+									<a role="button" href="">Modifier</a>
+									<a role="button" href="">Supprimer</a>
+								</ul>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</main>
+{% endblock %}

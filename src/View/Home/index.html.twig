@@ -1,35 +1,57 @@
 {% extends 'layout.html.twig' %}
-
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/home/header.css">
-	<link rel="stylesheet" href="/assets/css/home/actuality.css">
 	<link rel="stylesheet" href="/assets/css/home/partner.css">
+	<link rel="stylesheet" href="/assets/css/home/magazine.css">
+	<link rel="stylesheet" href="/assets/css/home/actuality.css">
 {% endblock %}
 {% block content %}
 	<header>
 		<h1>Association des Habitants d’Orléans La Source</h1>
 	</header>
-	<section>
-		<article>
-			<div class="feed">
-				<h2>DERNIÈRES ACTUALITÉS</h2>
-				<img src="assets/images/vector.png" class="decoration">
-				{% for article in actuality %}
-					<a href="">
-						<div class="article">
-							<h3>{{ article.title }}</h3>
-							<p class="article_date">{{ article.date }}</p>
-							<p>{{ article.content }}
-								<b>Lire la suite</b>
-							</p>
+	<section class="news_newspapers">
+		<section>
+			<article>
+				<div class="feed">
+					<h2>DERNIÈRES ACTUALITÉS</h2>
+					<img src="assets/images/vector.png" class="decoration">
+					{% for article in actuality %}
+						<a href="">
+							<div class="article">
+								<h3>{{ article.title }}</h3>
+								<p class="article_date">{{ article.date }}</p>
+								<p>{{ article.content }}
+									<b>Lire la suite</b>
+								</p>
+							</div>
+						</a>
+					{% endfor %}
+					<a class="show_more_news" href="">Consulter la rubrique actualités ➔</a>
+				</div>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<div class="magazine">
+					<h2>L'INDIEN</h2>
+					<img src="assets/images/vector.png" class="decoration">
+					{% for newspaper in newspapers %}
+						<div class="cover">
+							<h3>{{ newspaper.date }}</h3>
+							<a href={{ newspaper.link }}>
+								<img src={{ "assets/images/" ~ newspaper.cover }}>
+								<p class="number">{{ newspaper.number }}
+									<b>Lire la suite</b>
+								</p>
+							</div>
 						</div>
 					</a>
 				{% endfor %}
-				<a class="show_more" href="">Consulter la rubrique actualités ➔</a>
-			</div>
-		</article>
+				<a class="show_more_newspapers" href="">Consulter les anciens numéros ➔</a>
+			</article>
+		</section>
 	</section>
-
 	<section class="partners">
 		<h1>Nos partenaires</h1>
 		<ul>

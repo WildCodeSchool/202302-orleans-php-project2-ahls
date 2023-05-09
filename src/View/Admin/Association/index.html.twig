@@ -1,15 +1,19 @@
-{% extends 'layout.html.twig' %}
+{% extends 'adminLayout.html.twig' %}
 
 {% block title %}
 	{{ parent() }}
 	| Admin Association
 {% endblock %}
 
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin/adminListBoardMember.css">
+{% endblock %}
+
 
 {% block content %}
 	<main class="container">
-		<h1>Administration des membres du Conseil</h1>
-		<a href="/admin/association/ajouter" role="button">Ajouter un membre du Conseil</a>
+		<h3>Membres du Conseil</h3>
+		<a href="/admin/association/ajouter" role="button">Ajouter un membre</a>
 		<table>
 			<thead>
 				<tr>
@@ -24,15 +28,16 @@
 						<td>{{ boardMember.lastname }}</td>
 						<td>{{ boardMember.firstname }}</td>
 						<td>{{ boardMember.job }}</td>
-						<td>
+						<td class="btn-container">
 							<a role="button" href="/admin/association/modifier?id={{ boardMember.id }}">Modifier</a>
 							<form action="/admin/association/supprimer?id={{ boardMember.id }}" method="POST">
-								<button>Supprimer</button>
+								<button role="button">Supprimer</button>
 							</form>
 						</td>
 					</tr>
 				{% endfor %}
 			</tbody>
 		</table>
+		<a href="/" class="backToSite">Retour vers le site</a>
 	</main>
 {% endblock %}

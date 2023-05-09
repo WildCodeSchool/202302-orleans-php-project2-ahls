@@ -41,12 +41,12 @@ article>header {
     color: var(--primary-color);
     font-family: var(--text-font);
     font-weight: 700;
-    
 }
 
 article img {
     object-fit: cover;
     width: 100%;
+    filter: sepia(1);
 }
 
 article>footer {
@@ -57,15 +57,14 @@ article>footer {
 }
 
 footer a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 button {
     margin: 0;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: var(--text-font);
     border: 0;
     border-radius: 0 0 10px 10px;
-    border-bottom: 5px solid var(--primary-color);
 }

@@ -1,0 +1,70 @@
+{% extends 'adminLayout.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	| Administration du site
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin/adminHomePage.css">
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<h3>Administrer :</h3>
+
+		<details role="list">
+			<summary aria-haspopup="listbox" role="button">
+				Les Actualités
+			</summary>
+			<ul role="listbox">
+				<li>
+					<a href="admin/actualites">Voir la liste des actualités</a>
+				</li>
+				<li>
+					<a href="admin/actualites/ajouter">Ajouter une actualité</a>
+				</li>
+			</ul>
+		</details>
+		<details role="list">
+			<summary aria-haspopup="listbox" role="button">
+				Les Journaux L'Indien
+			</summary>
+			<ul role="listbox">
+				<li>
+					<a href="/admin/journaux">Voir la liste des journaux</a>
+				</li>
+				<li>
+					<a href="/admin/journaux/ajouter">Ajouter un journal</a>
+				</li>
+			</ul>
+		</details>
+		<details role="list">
+			<summary aria-haspopup="listbox" role="button">
+				Les Partenaires
+			</summary>
+			<ul role="listbox">
+				<li>
+					<a href="/admin/partenaire">Voir la liste des partenaires</a>
+				</li>
+				<li>
+					<a href="/admin/partenaire/ajouter">Ajouter un partenaire</a>
+				</li>
+			</ul>
+		</details>
+		<details role="list">
+			<summary aria-haspopup="listbox" role="button">
+				Les Membres du Conseil
+			</summary>
+			<ul role="listbox">
+				<li>
+					<a href="/admin/association">Voir la liste des membres</a>
+				</li>
+				<li>
+					<a href="/admin/association/ajouter">Ajouter un membre</a>
+				</li>
+			</ul>
+		</details>
+		<a href="/" class="backToSite">Retour vers le site</a>
+	</main>
+{% endblock %}

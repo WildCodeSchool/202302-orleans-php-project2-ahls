@@ -1,0 +1,42 @@
+h1 {
+    margin-top : var(--spacing);
+    text-align: center;
+    margin-bottom : 2rem;
+}
+
+ul {
+    padding-inline: 3rem;
+}
+
+.list {
+    margin: 2rem;
+}
+
+[role=button] {
+    padding: 0.3rem;
+}
+
+button {
+    width: 20%;
+    margin-block-end: 3rem;
+}
+
+form {
+    width : 90%;
+    margin : auto;
+}
+
+ul a {
+    margin-inline: 1rem;
+}
+
+.errors li {
+    color:red;
+    width : 90%;
+    margin :auto;
+    margin-top : var(--spacing);
+}
+
+footer {
+    display : none;
+}
