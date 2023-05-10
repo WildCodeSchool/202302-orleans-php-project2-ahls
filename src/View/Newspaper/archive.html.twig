@@ -6,17 +6,13 @@
     <details>
             <summary role="button">Archives</summary>
             <div class="archives">
-                <table>
-                    <tbody>
-                        {% for newspaper in newspapers|slice(9) %}
-                            <tr>
-                                <td>
-                                    <a href="{{ newspaper.link ?? '/'}}">n°{{newspaper.number}}  {{newspaper.date|date("m-Y")}}</a>
-                                </td>
-                            </tr>
-                        {% endfor %}                            
-                    </tbody>
-                </table>
+                <ul class="grid">
+                    {% for newspaper in newspapers|slice(9) %}
+                        <li>
+                            <a href="{{ newspaper.link ?? '/'}}">n°{{newspaper.number}}  {{newspaper.date|date("m-Y")}}</a>
+                        </li>
+                    {% endfor %}   
+                </ul>                         
             </div>
         </details>
 {% endblock %}

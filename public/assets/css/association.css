@@ -17,7 +17,7 @@ body > header {
     display: flex;
 }
 main {
-    width: 80%;
+    width: 100%;
 }
 .sidebar {
     width: 20%;
@@ -29,15 +29,12 @@ main {
 }
 .sidebar a {
     display: block;
-    padding: 2rem 3rem;
+    padding: 2rem clamp(1rem, 3vw, 3rem);
     color: var(--light-color);
     text-decoration: none;
+    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
 }
 .sidebar a:hover {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-}
-.sidebar a:active {
     background-color: var(--secondary-color);
     color: var(--dark-color);
 }
@@ -62,7 +59,7 @@ main {
     background-color: var(--secondary-color);
     padding: 0;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 100%;
 }
 .container-fluid p {
     font-size: var(--font-size);
@@ -111,26 +108,41 @@ main {
 }
 article {
     flex-basis: calc(25% - 10px);
+
     background-color: var(--light-color);
-    padding-block-end: var(--spacing);
+    padding-block-end: var(--spacing-s);
     margin-block-start: 1rem;
     margin-block-end: 1rem;
 }
 article > header {
-    margin-bottom: calc(var(--spacing) * 0.5);
+    margin-bottom: var(--spacing-s);
     border-bottom: none;
     padding: var(--spacing);
-    padding-block-end: var(--spacing);
+    padding-block-end: var(--spacing-s);
 }
 
 header .grid h1 {
     margin-bottom: var(--spacing-s);
 }
+
+header p {
+    margin-block-end: 0px;
+}
 .grid p {
     color: var(--primary-color);
+    margin-block-end: 0px;
 }
 .grid h3 {
     font-size: calc(var(--font-size) * 0.75);
-    margin-top: var(--spacing);
+    margin-top: none;
     margin-bottom: var(--spacing-s);
+}
+
+#histoire {
+    margin-block-start: calc(var(--spacing-l) * 1.5);
+}
+@media only screen and (max-width: 510px) {
+    .sidebar {
+        display: none;
+    }
 }

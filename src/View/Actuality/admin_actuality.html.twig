@@ -2,7 +2,7 @@
 
 {% block stylesheet %}
 	{{ parent() }}
-	<link rel="stylesheet" href="/assets/css/admin.css">
+	<link rel="stylesheet" href="/assets/css/admin/adminActuality.css">
 {% endblock %}
 
 {% block title %}
@@ -12,8 +12,8 @@
 
 {% block content %}
 	<main class="container">
-		<h1>Admin - Gestion des actualités</h1>
-		<a role="button" href="actualites/ajouter">Ajouter un article</a>
+		<h3>Gestion des actualités</h3>
+		<a class="addArticle" role="button" href="actualites/ajouter">Ajouter un article</a>
 		<div class="list">
 			<table>
 				<tbody>
@@ -21,10 +21,10 @@
 						<tr>
 							<td>
 								<ul>
-									<li>
+									<li class="article">
 										<b>{{ copy.title }}</b><br>Publié le
 										{{ copy.date }}<br>{{ copy.content }}</li>
-									<a role="button" href="">Modifier</a>
+									<a class="update" role="button" href="">Modifier</a>
 									<a role="button" href="">Supprimer</a>
 								</ul>
 							</td>
@@ -33,5 +33,6 @@
 				</tbody>
 			</table>
 		</div>
+		<a href="/" class="backToSite">Retour vers le site</a>
 	</main>
 {% endblock %}

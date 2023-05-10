@@ -1,31 +1,33 @@
 {% extends 'adminLayout.html.twig' %}
 
 {% block stylesheet %}
-{{ parent() }}
+	{{ parent () }}
 	<link rel="stylesheet" href="/assets/css/admin.css">
+	<link rel="stylesheet" href="/assets/css/admin/addActuality.css">
 {% endblock %}
 
 {% block title %}
-{{ parent() }} - Admin - Ajouter un article
+	{{ parent() }}
+	- Admin - Ajouter un article
 {% endblock %}
 {% block content %}
-<main class="container">
-<h1>Admin - Ajouter un article</h1>
-	<ul class="errors">
-		{% for error in errors %}
-			<li>{{ error }}</li>
-		{% endfor %}
-	</ul>
-	<form method="post">
-		<input type="hidden" value="{{ article.id }}" name="id">
-		<label for="title">Titre</label>
-		<input type="text" value="{{ article.title }}" name="title" id="title">
-		<label for="date">Date</label>
-		<input type="datetime-local" value="{{ article.date }}" name="date" id="date">
-		<label for="content">Contenu</label>
-		<textarea value="{{ article.content }}" name="content" id="content"></textarea>
-		<button>Soumettre</button>
-	</form>
-	<a class="back" href="/admin/actualites">Retour</a>
-</main>
+	<main class="container">
+		<h3>Admin - Ajouter un article</h3>
+		<ul class="errors">
+			{% for error in errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		<form method="post">
+			<input type="hidden" value="{{ article.id }}" name="id">
+			<label for="title">Titre</label>
+			<input type="text" value="{{ article.title }}" name="title" id="title">
+			<label for="date">Date</label>
+			<input type="datetime-local" value="{{ article.date }}" name="date" id="date">
+			<label for="content">Contenu</label>
+			<textarea class="textarea" value="{{ article.content }}" name="content" id="content"></textarea>
+			<button>Soumettre</button>
+		</form>
+		<a href="/" class="backToSite">Retour vers le site</a>
+	</main>
 {% endblock %}

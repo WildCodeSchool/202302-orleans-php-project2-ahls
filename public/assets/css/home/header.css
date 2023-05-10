@@ -1,5 +1,5 @@
 header {
-    background-image: url("../../images/indien.jpg");
+    background-image: url("../../images/gymnaseLaSource.jpeg");
     background-size: cover;
     background-position: top;
     width: 100%;
@@ -8,21 +8,26 @@ header {
     border-bottom: 1px solid var(--primary-color);
     box-shadow: 0 10px 10px -10px var(--shadow-color);
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body>header {
+body > header {
     padding: 0;
 }
 
-header h1 {
+.header-text h1 {
     font-family: var(--title-font);
     color: var(--light-color);
     font-size: 56px;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    backdrop-filter: blur(5px);
+    margin-block-end: 0px;
+}
 
+.header-text {
+    backdrop-filter: blur(10px);
 }

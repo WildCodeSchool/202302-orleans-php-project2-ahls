@@ -17,18 +17,23 @@ h1 {
     justify-content: center;
 }
 
-.grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
-    padding-inline: var(--spacing-s);
+main .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    padding-inline: 0;
+    margin-inline: clamp(1rem, 10%, 10rem);
     gap: var(--spacing);
     margin-top: var(--spacing-l);
     margin-bottom: var(--spacing-l);
 }
 
 article {
+    --articleHeight: 550px;
+    --articleHeader: 60px;
+    --articleFooter: 60px;
     padding-inline: 0;
     margin-top: 0;
     margin-bottom: 0;
+    height: var(--articleHeight);
 }
 
 article>header {
@@ -40,14 +45,19 @@ article>header {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-family: var(--text-font);
-    font-weight: 700;
+    font-weight: bold;
+    height: var(--articleHeader);
 }
 
 article img {
     object-fit: cover;
     width: 100%;
-    height: 550px;
-    filter: sepia(1);
+    height: calc(var(--articleHeight) - var(--articleHeader) - var(--articleFooter));
+    filter: sepia(0.75);
+}
+
+article img:hover {
+    filter: sepia(0.25);
 }
 
 article>footer {
@@ -55,6 +65,7 @@ article>footer {
     margin-top: 0;
     margin-inline: 0;
     border-top: 0;
+    height: var(--articleFooter);
 }
 
 footer a {
@@ -68,4 +79,5 @@ button {
     font-family: var(--text-font);
     border: 0;
     border-radius: 0 0 10px 10px;
+    height: 100%;
 }
